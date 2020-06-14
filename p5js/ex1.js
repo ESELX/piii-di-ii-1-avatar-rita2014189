@@ -1,4 +1,5 @@
 //Variáveis tipo let nomeDaVar;
+let numDiv;
 
 function setup() { //código que só corre uma vez
   
@@ -18,7 +19,8 @@ createCanvas(640, 480);
 function draw() { //código que corre em loop
  //desenha
    background(200, 220, 260);
-  
+  numDiv = 10;//map(mouseX,0,width,5,50);
+ 
 
   
 //head  
@@ -88,3 +90,10 @@ ellipse(370,450,45,35);
 
 
 } 
+for (i = 0; i < numDiv-1; i++){
+    for (j = 0; j <numDiv-1; j++){
+      ellipse((i+1)*width/numDiv,(j+1)*height/numDiv, 15);
+
+    }
+  }
+
